@@ -116,7 +116,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
      desktop proportions give. */
   #db-card .doing { font-size: 142px; }
   #db-card .wordmark { height: 118px; }
-  /* Same breathing room below the lockup as above it (invite has 52px
-     margin + the stack's 12px gap). */
-  #db-card .pills { margin-top: 52px; }
+  /* Half the invite-to-lockup breathing room below the lockup
+     (32px total vs 64px above, counting the stack's 12px gap). */
+  #db-card .pills { margin-top: 20px; }
 }
