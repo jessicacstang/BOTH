@@ -98,8 +98,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 #db-intro .globebox .rings span:nth-child(2) { top: 50%; }
 #db-intro .globebox .rings span:nth-child(3) { top: 70%; }
 #db-intro .qlist { display: flex; flex-direction: column; border-top: 1px solid #2E1914; }
-#db-intro .qrow { display: grid; grid-template-columns: clamp(34px, 3.4vw, 52px) 1fr; align-items: baseline; padding: clamp(13px, 1.5vw, 20px) 0; border-bottom: 1px solid #2E1914; }
-#db-intro .qrow .qn { font-family: 'Moderat Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace; font-weight: 400; font-size: clamp(20px, 2.1vw, 30px); line-height: 1.2; }
+#db-intro .qrow { display: grid; grid-template-columns: clamp(50px, 5vw, 76px) 1fr; align-items: baseline; padding: clamp(13px, 1.5vw, 20px) 0; border-bottom: 1px solid #2E1914; }
+#db-intro .qrow .qn { font-family: 'PP Editorial New', Georgia, serif; font-weight: 200; font-size: clamp(30px, 3.1vw, 46px); line-height: 1.1; }
 #db-intro .qrow p { font-weight: 400; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; margin: 0; text-wrap: pretty; }
 #db-foot { font-family: 'PP Mori', system-ui, sans-serif; background: #FFFCF2; color: #2E1914; font-weight: 600; font-size: 13px; text-transform: uppercase; text-align: center; padding: 0 4vw clamp(40px, 5vw, 72px); margin: 0; line-height: 1; }
 #db-intro a { color: #2E1914; }
