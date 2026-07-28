@@ -40,7 +40,6 @@ html, body { margin: 0; padding: 0; background: #FFFCF2; }
 }
 #db-card .fill { position: absolute; inset: 0; }
 #db-card .bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 54% 88%; }
-#db-card .scrim { background: linear-gradient(180deg, rgba(46,25,20,0.30) 0%, rgba(46,25,20,0.08) 38%, rgba(46,25,20,0.12) 62%, rgba(46,25,20,0.44) 100%); pointer-events: none; }
 #db-card .grain {
   opacity: 0.30; mix-blend-mode: overlay; pointer-events: none; background-size: 200px 200px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIj48ZmlsdGVyIGlkPSJuIj48ZmVUdXJidWxlbmNlIHR5cGU9ImZyYWN0YWxOb2lzZSIgYmFzZUZyZXF1ZW5jeT0iMC44NSIgbnVtT2N0YXZlcz0iMyIvPjwvZmlsdGVyPjxyZWN0IHdpZHRoPSIyMDAiIGhlaWdodD0iMjAwIiBmaWx0ZXI9InVybCgjbikiLz48L3N2Zz4=");
@@ -105,4 +104,8 @@ html, body { margin: 0; padding: 0; background: #FFFCF2; }
      4vw gutter the section uses on its sides. */
   #db-intro { padding-top: 4vw; }
   #db-intro .titlebox { padding-top: 0; }
+  /* Corner radius scaled down for phone-width cards (the scroll script
+     uses the matching 32px base below 760px). */
+  #db-card { border-radius: 32px; }
+  #db-intro .globebox { border-radius: 32px; }
 }
