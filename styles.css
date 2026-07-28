@@ -56,10 +56,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 
 #db-header { position: fixed; top: 0; left: 0; right: 0; z-index: 20; padding: clamp(26px, 5.6vw, 72px) 0 clamp(14px, 1.8vw, 22px); display: flex; justify-content: center; pointer-events: none; opacity: 0; }
 #db-header.on { opacity: 1; }
-#db-header .blur { position: absolute; left: 0; right: 0; top: 0; bottom: -56px; pointer-events: none; opacity: var(--t, 0); }
-#db-header .b1 { backdrop-filter: blur(4px) saturate(150%); -webkit-backdrop-filter: blur(4px) saturate(150%); -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 74%, transparent 100%); mask-image: linear-gradient(to bottom, #000 0%, #000 74%, transparent 100%); }
-#db-header .b2 { backdrop-filter: blur(10px) saturate(165%); -webkit-backdrop-filter: blur(10px) saturate(165%); -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 40%, transparent 78%); mask-image: linear-gradient(to bottom, #000 0%, #000 40%, transparent 78%); }
-#db-header .b3 { backdrop-filter: blur(22px) saturate(180%); -webkit-backdrop-filter: blur(22px) saturate(180%); background: rgba(255,252,242,0.22); -webkit-mask-image: linear-gradient(to bottom, #000 0%, #000 14%, transparent 48%); mask-image: linear-gradient(to bottom, #000 0%, #000 14%, transparent 48%); }
+/* Solid-to-transparent cream fade behind the fixed header — content
+   fades out as it approaches, no backdrop blur (no ghosted text). */
+#db-header .blur { position: absolute; left: 0; right: 0; top: 0; bottom: -56px; pointer-events: none; opacity: var(--t, 0); background: linear-gradient(180deg, #FFFCF2 0%, #FFFCF2 58%, rgba(255,252,242,0) 100%); }
 #db-header .lockup { position: relative; z-index: 2; display: flex; align-items: baseline; justify-content: center; gap: 2.69vw; }
 #db-header .doing { font-family: 'PP Editorial New', Georgia, serif; font-weight: 200; font-size: 14.64vw; line-height: 1; color: #FFFCF2; color: color-mix(in oklab, #2E1914 calc(var(--t, 0) * 100%), #FFFCF2); }
 #db-header .wmwrap { position: relative; height: 12.18vw; }
