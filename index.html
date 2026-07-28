@@ -187,7 +187,7 @@
     fontsReady.then(function () {
       var ctx = document.createElement('canvas').getContext('2d');
       ctx.font = '600 24px "PP Mori", sans-serif';
-      var w = Math.ceil(ctx.measureText(full).width) + 48;
+      var w = Math.ceil(ctx.measureText(full).width) + 120;
       var x = ((430 - w) / 2).toFixed(1);
       var pillSvg = label.closest('svg');
       pillSvg.querySelectorAll('rect').forEach(function (r) {
