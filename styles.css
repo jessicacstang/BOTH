@@ -94,3 +94,15 @@ html, body { margin: 0; padding: 0; background: #FFFCF2; }
 #db-foot { font-family: 'PP Mori', system-ui, sans-serif; background: #FFFCF2; color: #2E1914; font-weight: 600; font-size: 13px; text-transform: uppercase; text-align: center; padding: 0 4vw clamp(40px, 5vw, 72px); margin: 0; line-height: 1; }
 #db-intro a { color: #2E1914; }
 #db-intro a:hover { color: #92B8EF; }
+
+/* ---- mobile ---- */
+@media (max-width: 759px) {
+  /* The hero stack is scaled to ~1/3 on phones, so bump the invite line
+     and pill inside it to keep them legible. */
+  #db-invite { font-size: 48px; }
+  #db-card .pills svg { transform: scale(2); transform-origin: center top; }
+  /* Tighten the gap between the hero card and the intro to the same
+     4vw gutter the section uses on its sides. */
+  #db-intro { padding-top: 4vw; }
+  #db-intro .titlebox { padding-top: 0; }
+}
