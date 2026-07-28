@@ -119,4 +119,8 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   /* Half the invite-to-lockup breathing room below the lockup
      (32px total vs 64px above, counting the stack's 12px gap). */
   #db-card .pills { margin-top: 20px; }
+  /* Question rules run edge to edge; text keeps the 4vw gutter. */
+  #db-intro .qlist { margin-left: -4vw; margin-right: -4vw; }
+  #db-intro .qrow { padding-left: 4vw; padding-right: 4vw; }
+  #db-intro .cta { padding: 0 4vw; }
 }
