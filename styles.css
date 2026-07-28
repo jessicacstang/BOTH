@@ -104,9 +104,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
      and pill inside it to keep them legible. */
   #db-invite { font-size: 48px; margin-bottom: 84px; }
   #db-card .pills svg { transform: scale(1.7); transform-origin: center top; }
-  /* Tighten the gap between the hero card and the intro to the same
-     4vw gutter the section uses on its sides. */
-  #db-intro { padding-top: 4vw; }
+  /* Breathing space between the hero card and the intro — a bit more
+     than the 4vw side gutter. */
+  #db-intro { padding-top: 9vw; }
   #db-intro .titlebox { padding-top: 0; }
   /* Corner radius scaled down for phone-width cards (the scroll script
      uses the matching 32px base below 760px). */
