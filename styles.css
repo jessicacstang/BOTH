@@ -102,7 +102,7 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 @media (max-width: 759px) {
   /* The hero stack is scaled to ~1/3 on phones, so bump the invite line
      and pill inside it to keep them legible. */
-  #db-invite { font-size: 48px; }
+  #db-invite { font-size: 48px; margin-bottom: 84px; }
   #db-card .pills svg { transform: scale(1.7); transform-origin: center top; }
   /* Tighten the gap between the hero card and the intro to the same
      4vw gutter the section uses on its sides. */
