@@ -185,9 +185,13 @@
   if (window.innerWidth < 760) {
     var fontsReady = (document.fonts && document.fonts.ready) ? document.fonts.ready : Promise.resolve();
     fontsReady.then(function () {
+      // The svg is scaled 1.7x on phones; 28.2px here keeps the label's
+      // rendered size equal to the 48px invite line (28.2 * 1.7 ≈ 48).
+      var size = 28.2;
+      label.setAttribute('font-size', size);
       var ctx = document.createElement('canvas').getContext('2d');
-      ctx.font = '600 24px "PP Mori", sans-serif';
-      var w = Math.ceil(ctx.measureText(full).width) + 120;
+      ctx.font = '600 ' + size + 'px "PP Mori", sans-serif';
+      var w = Math.ceil(ctx.measureText(full).width) + 90;
       var x = ((430 - w) / 2).toFixed(1);
       var pillSvg = label.closest('svg');
       pillSvg.querySelectorAll('rect').forEach(function (r) {
