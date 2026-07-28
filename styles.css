@@ -28,6 +28,10 @@
 }
 
 html, body { margin: 0; padding: 0; background: #FFFCF2; }
+/* Keep iOS Safari from inflating HTML text inside the scaled hero stack
+   (SVG text is never inflated, which made the pill label look smaller
+   than the invite line on iPhones). */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 * { letter-spacing: 0; }
 #db-pin { position: relative; height: 200vh; }
 #db-sticky { position: sticky; top: 0; height: 100vh; display: flex; align-items: center; overflow: hidden; }
@@ -108,4 +112,10 @@ html, body { margin: 0; padding: 0; background: #FFFCF2; }
      uses the matching 32px base below 760px). */
   #db-card { border-radius: 32px; }
   #db-intro .globebox { border-radius: 32px; }
+  /* Smaller lockup type so DOING BOTH sits further from the card edges. */
+  #db-card .doing { font-size: 126px; }
+  #db-card .wordmark { height: 105px; }
+  /* Same breathing room below the lockup as above it (invite has 52px
+     margin + the stack's 12px gap). */
+  #db-card .pills { margin-top: 52px; }
 }
