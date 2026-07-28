@@ -75,8 +75,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 #db-intro .eyebrow { grid-column: 1 / -1; font-family: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace; font-size: clamp(13px, 1.4vw, 20px); font-weight: 500; line-height: 1.2; text-transform: uppercase; margin: clamp(20px, 2.6vw, 40px) 0 calc(22px - clamp(20px, 2.4vw, 32px)); text-align: left; }
 @media (min-width: 760px) {
   #db-intro .titlebox { grid-column: 1 / 6; }
-  #db-intro .qlist { grid-column: span 4; }
-  #db-intro .globebox { grid-column: span 2; align-self: stretch; }
+  #db-intro .qlist { grid-column: 1 / -1; }
+  /* Globe as its own full-bleed band between the questions and footer. */
+  #db-intro .globebox { grid-column: 1 / -1; margin-left: -4vw; margin-right: -4vw; }
 }
 #db-intro .titlebox { padding: clamp(24px, 4vw, 64px) 0 clamp(8px, 1.4vw, 20px); text-align: left; }
 #db-intro h1 { font-family: ui-monospace, 'SF Mono', SFMono-Regular, Menlo, Consolas, monospace; font-weight: 500; font-size: clamp(13px, 1.4vw, 20px); line-height: 1.2; text-transform: uppercase; margin: 0 0 clamp(14px, 1.4vw, 20px); text-wrap: pretty; }
@@ -90,8 +91,9 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
 #db-intro .globebox .rings span:nth-child(1) { top: 30%; }
 #db-intro .globebox .rings span:nth-child(2) { top: 50%; }
 #db-intro .globebox .rings span:nth-child(3) { top: 70%; }
-#db-intro .qlist { display: flex; flex-direction: column; border-top: 1px solid #2E1914; }
-#db-intro .qrow { display: grid; grid-template-columns: clamp(50px, 5vw, 76px) 1fr; align-items: baseline; padding: clamp(13px, 1.5vw, 20px) 0; border-bottom: 1px solid #2E1914; }
+#db-intro .qlist { display: flex; flex-direction: column; border-top: 1px solid #2E1914; margin-left: -4vw; margin-right: -4vw; }
+#db-intro .cta { padding-left: 4vw; padding-right: 4vw; }
+#db-intro .qrow { display: grid; grid-template-columns: clamp(50px, 5vw, 76px) 1fr; align-items: baseline; padding: clamp(13px, 1.5vw, 20px) 4vw; border-bottom: 1px solid #2E1914; }
 #db-intro .qrow .qn { font-family: 'PP Editorial New', Georgia, serif; font-weight: 200; font-size: clamp(30px, 3.1vw, 46px); line-height: 1.1; }
 #db-intro .qrow p { font-weight: 400; font-size: clamp(17px, 1.4vw, 19px); line-height: 1.5; margin: 0; text-wrap: pretty; }
 #db-foot { font-family: 'PP Mori', system-ui, sans-serif; background: #FFFCF2; color: #2E1914; font-weight: 600; font-size: 13px; text-transform: uppercase; text-align: center; padding: 0 4vw clamp(40px, 5vw, 72px); margin: 0; line-height: 1; }
@@ -119,8 +121,10 @@ html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; }
   /* Half the invite-to-lockup breathing room below the lockup
      (32px total vs 64px above, counting the stack's 12px gap). */
   #db-card .pills { margin-top: 20px; }
-  /* Question rules run edge to edge; text keeps the 4vw gutter. */
-  #db-intro .qlist { margin-left: -4vw; margin-right: -4vw; }
-  #db-intro .qrow { padding-left: 4vw; padding-right: 4vw; }
-  #db-intro .cta { padding: 0 4vw; }
+}
+
+@media (min-width: 760px) {
+  /* Square corners for the full-bleed globe band (overrides the 78px base
+     radius; kept after it in the cascade). */
+  #db-intro .globebox { border-radius: 0; }
 }
